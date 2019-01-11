@@ -1,1 +1,7 @@
 <h1><%= @student.to_s %></h1>
+
+<p>"This student is currently <%=@student.active === false ? "inactive." : "active"%>"</p>
+
+<form class="" action="/students/<%=@student.id%>/activate" method="get">
+  <button type="submit">Toggle</button>
+</form>
