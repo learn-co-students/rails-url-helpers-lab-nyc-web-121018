@@ -1,1 +1,10 @@
 <h1><%= @student.to_s %></h1>
+<%if @student.active == TRUE%>
+  <p>This student is currently active.</p>
+<%else%>
+  <p>This student is currently inactive.</p>
+<%end%>
+
+<form class="" action="/students/<%=@student.id%>/activate" method="get">
+  <button type="submit">Toggle</button>
+</form>
